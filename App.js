@@ -10,6 +10,9 @@ import NewOrderScreen from './screens/SiteManager/NewOrderScreen';
 import AllOrdersScreen from './screens/SiteManager/AllOrdersScreen';
 import Quotations from './screens/Supplier/Quotations';
 import NewInvoiceScreen from './screens/Supplier/NewInvoiceScreen';
+import AllInvoices from './screens/Supplier/AllInvoices';
+import NewDelivery from './screens/Supplier/NewDelivery';
+import DeliveryScreen from './screens/DeliveryScreen';
 
 export default function App() {
 
@@ -26,6 +29,9 @@ export default function App() {
         <Stack.Screen name='AllOrders' component={AllOrdersScreen} />
         <Stack.Screen name='Quotes' component={Quotations} />
         <Stack.Screen name='NewInvoice' component={NewInvoiceScreen} />
+        <Stack.Screen name='AllInvoices' component={AllInvoices} />
+        <Stack.Screen name='NewDelivery' component={NewDelivery} />
+        <Stack.Screen name='Delivery' component={DeliveryScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

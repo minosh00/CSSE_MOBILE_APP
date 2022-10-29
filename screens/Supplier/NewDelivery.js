@@ -1,41 +1,38 @@
 import axios from "axios";
 import React, { useState } from "react";
 import {
+    Alert,
   ScrollView,
   Text,
   TextInput,
-  View,
   TouchableOpacity,
-  Alert,
+  View,
 } from "react-native";
 import commonStyles from "../../styles/common";
 
-const NewInvoiceScreen = ({ route, navigation }) => {
-  const [invoiceID, setInvoiceID] = useState("");
+const NewDelivery = ({ route, navigation }) => {
+  const [transportID, setTransportID] = useState("");
   const [location, setLocation] = useState("");
-  const [orderID, setOrderID] = useState("");
-  const [itemName, setItemName] = useState("");
-  const [qty, setQty] = useState("");
-  const [price, setPrice] = useState(0);
+  const [status, setStatus] = useState("");
+  const [vehicleNo, setVehicleNo] = useState("");
 
-  const URL = "https://backendhostings.herokuapp.com/Invoices/Createinvoices";
-
-  const createInvoice = () => {
+  const addDelivery = () => {
     const payload = {
-      InvoicesID: invoiceID,
-      OrderID: orderID,
+      OrderID: route.params.orderID,
+      TransportID: transportID,
       location: location,
-      Material: itemName,
-      qty: qty,
-      Amount: price,
+      TransportStatus: status,
+      VehicleNumber: vehicleNo,
     };
+
+    const URL = "https://backendhostings.herokuapp.com/Transport/createTransport"
 
     axios
       .post(URL, payload)
       .then((_response) => {
         Alert.alert(
-          "Invoice Created!",
-          "Your invoice has been created successfully!!",
+          "Delivery Added!",
+          "Your Delivery has been created successfully!!",
           [
             {
               text: "OK",
@@ -71,16 +68,10 @@ const NewInvoiceScreen = ({ route, navigation }) => {
     >
       <ScrollView style={{ width: "80%", margin: 2 }}>
         <TextInput
-          value={invoiceID}
-          onChange={(e) => setInvoiceID(e.nativeEvent.text)}
+          value={transportID}
+          onChange={(e) => setTransportID(e.nativeEvent.text)}
           style={commonStyles.textView}
-          placeholder="Invoice ID"
-        />
-        <TextInput
-          value={orderID}
-          onChange={(e) => setOrderID(e.nativeEvent.text)}
-          style={commonStyles.textView}
-          placeholder="Order ID"
+          placeholder="Transport ID"
         />
         <TextInput
           value={location}
@@ -89,34 +80,23 @@ const NewInvoiceScreen = ({ route, navigation }) => {
           placeholder="Location"
         />
         <TextInput
-          value={itemName}
-          onChange={(e) => setItemName(e.nativeEvent.text)}
+          value={status}
+          onChange={(e) => setStatus(e.nativeEvent.text)}
           style={commonStyles.textView}
-          placeholder="Item Name"
+          placeholder="Transport Status"
         />
         <TextInput
-          keyboardType="number-pad"
-          value={qty}
-          onChange={(e) => setQty(e.nativeEvent.text)}
+          value={vehicleNo}
+          onChange={(e) => setVehicleNo(e.nativeEvent.text)}
           style={commonStyles.textView}
-          placeholder="Quantity"
+          placeholder="Vehicle Number"
         />
-        <TextInput
-          value={price}
-          keyboardType="decimal-pad"
-          onChange={(e) => setPrice(e.nativeEvent.text)}
-          style={commonStyles.textView}
-          placeholder="Price"
-        />
-        <TouchableOpacity
-          onPress={() => createInvoice()}
-          style={commonStyles.button}
-        >
-          <Text style={{ color: "white" }}>Create Invoice</Text>
+        <TouchableOpacity onPress={() => addDelivery()} style={commonStyles.button}>
+          <Text style={{ color: "white" }}>Add Delivery</Text>
         </TouchableOpacity>
       </ScrollView>
     </View>
   );
 };
 
-export default NewInvoiceScreen;
+export default NewDelivery;

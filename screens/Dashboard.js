@@ -4,7 +4,7 @@ import dashboardStyles from "../styles/dashboard";
 
 const Dashboard = ({ route, navigation }) => {
   useEffect(() => {
-    console.log(route.params)
+    console.log(route.params);
     if (!!!route.params) {
       navigation.navigate("Login");
     }
@@ -38,32 +38,50 @@ const Dashboard = ({ route, navigation }) => {
             >
               <Text style={{ color: "white" }}>All Orders</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={dashboardStyles.card}>
-              <Text style={{ color: "white" }}>Delivery</Text>
-            </TouchableOpacity>
           </>
         )}
 
         {route.params.userRole.toLocaleLowerCase() === "supplier" && (
           <>
             {/* Supplier */}
-            <TouchableOpacity onPress={() => navigation.navigate("Quotes", {
-              userID: route.params.userID,
-              userRole: route.params.userRole,
-            })} style={dashboardStyles.card}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate("Quotes", {
+                  userID: route.params.userID,
+                  userRole: route.params.userRole,
+                })
+              }
+              style={dashboardStyles.card}
+            >
               <Text style={{ color: "white" }}>Quotations</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={dashboardStyles.card}>
+            <TouchableOpacity
+              onPress={() =>
+                navigation.navigate("AllInvoices", {
+                  userID: route.params.userID,
+                  userRole: route.params.userRole,
+                })
+              }
+              style={dashboardStyles.card}
+            >
               <Text style={{ color: "white" }}>Invoices</Text>
             </TouchableOpacity>
             <TouchableOpacity style={dashboardStyles.card}>
               <Text style={{ color: "white" }}>Payment</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={dashboardStyles.card}>
-              <Text style={{ color: "white" }}>Delivery</Text>
-            </TouchableOpacity>
           </>
         )}
+        <TouchableOpacity
+          onPress={() =>
+            navigation.navigate("Delivery", {
+              userID: route.params.userID,
+              userRole: route.params.userRole,
+            })
+          }
+          style={dashboardStyles.card}
+        >
+          <Text style={{ color: "white" }}>Delivery</Text>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );
