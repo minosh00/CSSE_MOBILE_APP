@@ -17,6 +17,7 @@ import PaymentScreen from './screens/Supplier/PaymentScreen';
 import AddItems from './screens/Supplier/AddItems';
 import AllItemsScreen from './screens/SiteManager/AllItemsScreen';
 import ViewPayment from './screens/Supplier/ViewPayment';
+import UpdateOrderScreen from './screens/SiteManager/UpdateOrderScreen';
 
 export default function App() {
 
@@ -40,6 +41,7 @@ export default function App() {
         <Stack.Screen name='AddItem' component={AddItems} />
         <Stack.Screen name='AllItems' component={AllItemsScreen} />
         <Stack.Screen name='ViewPayment' component={ViewPayment} />
+        <Stack.Screen name='UpdateOrder' component={UpdateOrderScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
