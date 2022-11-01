@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import commonStyles from "../styles/common";
 import orderStyles from "../styles/orders";
 
@@ -31,7 +31,18 @@ const DeliveryScreen = ({ route, navigation }) => {
 
   return (
     <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <ScrollView style={{ display: "flex", flexDirection: "column" }}>
+      <Image
+        source={require("../assets/Images/Truck.gif")}
+        style={{ height: "34%", width: "100%" }}
+      />
+      <ScrollView
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          backgroundColor: "white",
+          width: "90%",
+        }}
+      >
         {deliv.map((order, index) => (
           <View style={orderStyles.orderCard} key={order + index}>
             <Text
@@ -65,13 +76,21 @@ const DeliveryScreen = ({ route, navigation }) => {
             >
               <Text style={orderStyles.status}>{order.TransportStatus}</Text>
             </View>
-            {route.params.userRole.toLocaleLowerCase().trim() === "sitemanager" && 
-            <TouchableOpacity
-              onPress={() => createInvoice()}
-              style={commonStyles.button}
-            >
-              <Text style={{ color: "white" }}>Make Payment</Text>
-            </TouchableOpacity>}
+            {route.params.userRole.toLocaleLowerCase().trim() ===
+              "sitemanager" && (
+              <TouchableOpacity
+                onPress={() =>
+                  navigation.navigate("Payment", {
+                    userID: route.params.userID,
+                    userRole: route.params.userRole,
+                    orderID: order.OrderID,
+                  })
+                }
+                style={commonStyles.button}
+              >
+                <Text style={{ color: "white" }}>Make Payment</Text>
+              </TouchableOpacity>
+            )}
           </View>
         ))}
       </ScrollView>

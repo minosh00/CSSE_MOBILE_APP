@@ -4,15 +4,15 @@ import Colors from "./Colors";
 const orderStyles = StyleSheet.create({
   orderCard: {
     backgroundColor: Colors.inputBG,
-    margin: 2,
-    padding: 5,
-    borderRadius: 12,
+    marginVertical: 8,
+    padding: 10,
+    borderRadius: 12
   },
   items: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: 6,
+    padding: 6
   },
   orderID: {
     marginVertical: 2,

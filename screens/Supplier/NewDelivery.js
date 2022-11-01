@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import {
     Alert,
+  Image,
   ScrollView,
   Text,
   TextInput,
@@ -66,6 +67,7 @@ const NewDelivery = ({ route, navigation }) => {
         width: "100%",
       }}
     >
+        <Image style = {{height: "30%", width: "100%"}} resizeMode = "cover" source={require("../../assets/Images/Truck.gif")} />
       <ScrollView style={{ width: "80%", margin: 2 }}>
         <TextInput
           value={transportID}

@@ -5,16 +5,19 @@ const dashboardStyles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        width: "100%"
     },
     card: {
         backgroundColor: Colors.primary,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: 40,
+        width: "80%",
+        paddingHorizontal: 40,
+        paddingVertical: 20,
         margin: 4,
-        borderRadius: 12
+        borderRadius: 23
     }
 })
 

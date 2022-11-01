@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import {
   Alert,
+  Image,
   ScrollView,
   Text,
   TextInput,
@@ -32,8 +33,12 @@ const LoginScreen = ({ navigation }) => {
 
   return (
     <View style={loginStyles.logPage}>
+      <Image
+        source={require("../assets/Images/LoginBackground.png")}
+        style={{ width: "100%", height: "40%" }}
+        resizeMode = "contain"
+      />
       <ScrollView style={{ width: "80%" }}>
-        <View>
           <TextInput
             keyboardType="email-address"
             style={commonStyles.textView}
@@ -57,7 +62,6 @@ const LoginScreen = ({ navigation }) => {
           >
             <Text style={commonStyles.buttonText}>Login</Text>
           </TouchableOpacity>
-        </View>
       </ScrollView>
     </View>
   );

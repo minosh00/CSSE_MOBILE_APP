@@ -13,6 +13,7 @@ import NewInvoiceScreen from './screens/Supplier/NewInvoiceScreen';
 import AllInvoices from './screens/Supplier/AllInvoices';
 import NewDelivery from './screens/Supplier/NewDelivery';
 import DeliveryScreen from './screens/DeliveryScreen';
+import PaymentScreen from './screens/Supplier/PaymentScreen';
 
 export default function App() {
 
@@ -32,6 +33,7 @@ export default function App() {
         <Stack.Screen name='AllInvoices' component={AllInvoices} />
         <Stack.Screen name='NewDelivery' component={NewDelivery} />
         <Stack.Screen name='Delivery' component={DeliveryScreen} />
+        <Stack.Screen name='Payment' component={PaymentScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

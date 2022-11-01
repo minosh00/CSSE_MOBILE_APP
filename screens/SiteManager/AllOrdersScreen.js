@@ -32,7 +32,7 @@ const AllOrdersScreen = ({route, navigation}) => {
 
   return (
     <View style = {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <ScrollView style = {{display: 'flex', flexDirection: 'column'}}>
+        <ScrollView style = {{display: 'flex', flexDirection: 'column', width: "90%"}}>
             {
                 orders.map((order, index) => (
                     <View style = {orderStyles.orderCard} key={order + index}>
@@ -53,7 +53,7 @@ const AllOrdersScreen = ({route, navigation}) => {
                                 <Text style = {{marginVertical: 2}}>{order.Deadline}</Text>
                             </View>
                         </View>
-                        <View style = {checkState(order.status.toLocaleLowerCase())}>
+                        <View style = {checkState(order.status.toLocaleLowerCase().trim())}>
                             <Text style = {orderStyles.status}>{order.status}</Text>
                         </View>
                     </View>

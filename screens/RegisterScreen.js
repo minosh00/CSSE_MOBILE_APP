@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import {
   Alert,
   Button,
+  Image,
   ScrollView,
   Text,
   TextInput,
@@ -32,7 +33,6 @@ const RegisterScreen = ({ navigation }) => {
       userRole: role,
       supplierAddress: supAddress,
     };
-    console.log(payload);
 
     axios
       .post(URL, payload)
@@ -52,8 +52,17 @@ const RegisterScreen = ({ navigation }) => {
 
   return (
     <View style={registerStyles.regPage}>
-      <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }} style={{ width: "80%" }}>
-        <View style = {{backgroundColor: 'white', height: '100%'}}>
+      <Image
+        source={require("../assets/Images/RegisterBackground.png")}
+        style={{ width: "100%", height: "20%" }}
+        resizeMode = "contain"
+      />
+
+      <ScrollView
+        contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}
+        style={{ width: "80%" }}
+      >
+        <View style={{ backgroundColor: "white", height: "100%" }}>
           <TextInput
             style={commonStyles.textView}
             onChange={(e) => setName(e.nativeEvent.text)}
@@ -117,7 +126,15 @@ const RegisterScreen = ({ navigation }) => {
             <Text style={commonStyles.buttonText}>Register</Text>
           </TouchableOpacity>
 
-          <Button title="Login" onPress={() => navigation.navigate("Login")} />
+          <Text style={{ textAlign: "center" }}>OR</Text>
+
+          <TouchableOpacity
+            style={commonStyles.button}
+            disabled={pwd !== cpwd}
+            onPress={() => navigation.navigate("Login")}
+          >
+            <Text style={commonStyles.buttonText}>Login</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
     </View>

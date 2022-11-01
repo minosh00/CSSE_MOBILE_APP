@@ -53,8 +53,6 @@ const NewOrderScreen = ({ route, navigation }) => {
       note: notes
     };
 
-    console.log(payload.Price)
-
     axios
       .post(URL, payload)
       .then((_response) => {

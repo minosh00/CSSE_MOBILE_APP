@@ -6,7 +6,7 @@ import orderStyles from '../../styles/orders';
 
 const AllInvoices = ({ route, navigation }) => {
 
-    const [invoices, setInvoices] = useState([{OrderID: "0001"}]);
+    const [invoices, setInvoices] = useState([]);
 
     useEffect(() => {
         axios.get("https://backendhostings.herokuapp.com/Invoices/Allinvoices").then((res) => {
