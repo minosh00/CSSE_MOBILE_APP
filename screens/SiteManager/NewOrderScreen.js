@@ -50,7 +50,7 @@ const NewOrderScreen = ({ route, navigation }) => {
       DeliveryAddress: delAddress,
       Description: desc,
       Price: price,
-      note: notes
+      note: notes,
     };
 
     axios
@@ -86,30 +86,56 @@ const NewOrderScreen = ({ route, navigation }) => {
   return (
     <View>
       <ScrollView>
-        <Text style = {{textAlign: "center", fontSize: 16, fontWeight: "600", marginTop: 12}}>Select a Supplier</Text>
-        <ScrollView horizontal style = {{display: "flex", flexDirection: "row", marginVertical: 12}}>
-            {suppliers.map((sup, index) => (
-              <TouchableOpacity
-                key={`${sup}${index}`}
-                onPress={() => setSelected(sup._id)}
+        <Text
+          style={{
+            textAlign: "center",
+            fontSize: 16,
+            fontWeight: "600",
+            marginTop: 12,
+          }}
+        >
+          Select a Supplier
+        </Text>
+        <ScrollView
+          horizontal
+          style={{ display: "flex", flexDirection: "row", marginVertical: 12 }}
+        >
+          {suppliers.map((sup, index) => (
+            <TouchableOpacity
+              key={`${sup}${index}`}
+              onPress={() => setSelected(sup._id)}
+              style={
+                selected === sup._id
+                  ? newOrderStyles.supplierSelected
+                  : newOrderStyles.supplier
+              }
+            >
+              <Text
                 style={
                   selected === sup._id
-                    ? newOrderStyles.supplierSelected
-                    : newOrderStyles.supplier
+                    ? { color: "white" }
+                    : { color: Colors.primary }
                 }
               >
-                <Text
-                  style={
-                    selected === sup._id
-                      ? { color: "white" }
-                      : { color: Colors.primary }
-                  }
-                >
-                  {sup.name}
-                </Text>
-              </TouchableOpacity>
-            ))}
+                {sup.name}
+              </Text>
+            </TouchableOpacity>
+          ))}
         </ScrollView>
+        {selected !== "" && (
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate("AllItems", {
+                userID: route.params.userID,
+                userRole: route.params.userRole,
+                supplierID: selected,
+              })
+            }
+            style={commonStyles.button}
+          >
+            <Text style={{ color: "white" }}>Check Items</Text>
+          </TouchableOpacity>
+        )}
         <TextInput
           value={orderID}
           onChange={(e) => setOrderID(e.nativeEvent.text)}
@@ -143,7 +169,7 @@ const NewOrderScreen = ({ route, navigation }) => {
         />
         <TextInput
           value={price}
-          keyboardType = "decimal-pad"
+          keyboardType="decimal-pad"
           onChange={(e) => setPrice(e.nativeEvent.text)}
           style={commonStyles.textView}
           placeholder="Price"

@@ -19,7 +19,7 @@ const Quotations = ({route, navigation}) => {
 
   return (
     <View style = {{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <ScrollView style = {{display: 'flex', flexDirection: 'column', width: "40%", margin: 6}}>
+        <ScrollView style = {{display: 'flex', flexDirection: 'column', width: "80%", margin: 6}}>
         {
             quotes.map((quote, index) => (
                 <View style = {orderStyles.orderCard} key={quote + index}>

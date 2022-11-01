@@ -39,7 +39,7 @@ const DeliveryScreen = ({ route, navigation }) => {
         style={{
           display: "flex",
           flexDirection: "column",
-          backgroundColor: "white",
+          backgroundColor: "transparent",
           width: "90%",
         }}
       >

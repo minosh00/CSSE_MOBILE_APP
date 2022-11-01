@@ -19,7 +19,11 @@ const Dashboard = ({ route, navigation }) => {
 
   return (
     <View style={dashboardStyles.container}>
-      <Image style = {{width: "100%", height: "40%"}} resizeMode = "contain" source={require("../assets/Images/DashboardBackground.png")} />
+      <Image
+        style={{ width: "100%", height: "40%" }}
+        resizeMode="contain"
+        source={require("../assets/Images/DashboardBackground.png")}
+      />
       {route.params.userRole.toLocaleLowerCase().trim() === "sitemanager" && (
         <>
           {/* Site Manager */}
@@ -64,6 +68,17 @@ const Dashboard = ({ route, navigation }) => {
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() =>
+              navigation.navigate("AddItem", {
+                userID: route.params.userID,
+                userRole: route.params.userRole,
+              })
+            }
+            style={dashboardStyles.card}
+          >
+            <Text style={{ color: "white" }}>Add Items</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() =>
               navigation.navigate("AllInvoices", {
                 userID: route.params.userID,
                 userRole: route.params.userRole,
@@ -73,7 +88,12 @@ const Dashboard = ({ route, navigation }) => {
           >
             <Text style={{ color: "white" }}>Invoices</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={dashboardStyles.card}>
+          <TouchableOpacity onPress={() =>
+              navigation.navigate("ViewPayment", {
+                userID: route.params.userID,
+                userRole: route.params.userRole,
+              })
+            } style={dashboardStyles.card}>
             <Text style={{ color: "white" }}>Payment</Text>
           </TouchableOpacity>
         </>
