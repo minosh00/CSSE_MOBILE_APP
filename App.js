@@ -14,6 +14,9 @@ import AllInvoices from './screens/Supplier/AllInvoices';
 import NewDelivery from './screens/Supplier/NewDelivery';
 import DeliveryScreen from './screens/DeliveryScreen';
 import PaymentScreen from './screens/Supplier/PaymentScreen';
+import AddItems from './screens/Supplier/AddItems';
+import AllItemsScreen from './screens/SiteManager/AllItemsScreen';
+import ViewPayment from './screens/Supplier/ViewPayment';
 
 export default function App() {
 
@@ -34,6 +37,9 @@ export default function App() {
         <Stack.Screen name='NewDelivery' component={NewDelivery} />
         <Stack.Screen name='Delivery' component={DeliveryScreen} />
         <Stack.Screen name='Payment' component={PaymentScreen} />
+        <Stack.Screen name='AddItem' component={AddItems} />
+        <Stack.Screen name='AllItems' component={AllItemsScreen} />
+        <Stack.Screen name='ViewPayment' component={ViewPayment} />
       </Stack.Navigator>
     </NavigationContainer>
   );
