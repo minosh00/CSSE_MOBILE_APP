@@ -71,12 +71,12 @@ const DeliveryScreen = ({ route, navigation }) => {
             </View>
             <View
               style={checkState(
-                order.TransportStatus.toLocaleLowerCase().trim()
+                order.TransportStatus.toLocaleLowerCase().replace(/\s/g, '')
               )}
             >
               <Text style={orderStyles.status}>{order.TransportStatus}</Text>
             </View>
-            {route.params.userRole.toLocaleLowerCase().trim() ===
+            {route.params.userRole.toLocaleLowerCase().replace(/\s/g, '') ===
               "sitemanager" && (
               <TouchableOpacity
                 onPress={() =>

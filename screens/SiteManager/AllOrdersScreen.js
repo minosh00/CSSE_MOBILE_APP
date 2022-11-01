@@ -53,7 +53,7 @@ const AllOrdersScreen = ({route, navigation}) => {
                                 <Text style = {{marginVertical: 2}}>{order.Deadline}</Text>
                             </View>
                         </View>
-                        <View style = {checkState(order.status.toLocaleLowerCase().trim())}>
+                        <View style = {checkState(order.status.toLocaleLowerCase().replace(/\s/g, ''))}>
                             <Text style = {orderStyles.status}>{order.status}</Text>
                         </View>
                     </View>

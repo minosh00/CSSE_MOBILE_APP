@@ -11,7 +11,6 @@ import dashboardStyles from "../styles/dashboard";
 
 const Dashboard = ({ route, navigation }) => {
   useEffect(() => {
-    console.log(route.params);
     if (!!!route.params) {
       navigation.navigate("Login");
     }
@@ -24,7 +23,7 @@ const Dashboard = ({ route, navigation }) => {
         resizeMode="contain"
         source={require("../assets/Images/DashboardBackground.png")}
       />
-      {route.params.userRole.toLocaleLowerCase().trim() === "sitemanager" && (
+      {route.params.userRole.toLocaleLowerCase().replace(/\s/g, '') === "sitemanager" && (
         <>
           {/* Site Manager */}
           <TouchableOpacity
@@ -52,7 +51,7 @@ const Dashboard = ({ route, navigation }) => {
         </>
       )}
 
-      {route.params.userRole.toLocaleLowerCase().trim() === "supplier" && (
+      {route.params.userRole.toLocaleLowerCase().replace(/\s/g, '') === "supplier" && (
         <>
           {/* Supplier */}
           <TouchableOpacity
