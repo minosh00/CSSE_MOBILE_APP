@@ -68,6 +68,7 @@ const AddItems = ({ route, navigation }) => {
       />
       <TextInput
         value={price}
+        keyboardType="number-pad"
         placeholder="Item Price"
         onChange={(e) => setPrice(e.nativeEvent.text)}
         style={commonStyles.textView}
