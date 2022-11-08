@@ -14,6 +14,8 @@ import commonStyles from "../styles/common";
 import registerStyles from "../styles/register";
 
 const RegisterScreen = ({ navigation }) => {
+
+  // states
   const [role, setRole] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -22,9 +24,13 @@ const RegisterScreen = ({ navigation }) => {
   const [pwd, setPwd] = useState("");
   const [cpwd, setCpwd] = useState("");
 
+
+  // function to register an user
   const registerUser = () => {
+    //backend URL
     const URL = "https://backendhostings.herokuapp.com/user/signup";
 
+    //payload for send to backend
     const payload = {
       name: name,
       email: email,
@@ -34,6 +40,7 @@ const RegisterScreen = ({ navigation }) => {
       supplierAddress: supAddress,
     };
 
+    //network call using above data
     axios
       .post(URL, payload)
       .then((res) => {
@@ -58,6 +65,7 @@ const RegisterScreen = ({ navigation }) => {
         resizeMode = "contain"
       />
 
+      {/* form for register an user */}
       <ScrollView
         contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}
         style={{ width: "80%" }}
@@ -108,6 +116,8 @@ const RegisterScreen = ({ navigation }) => {
             value={cpwd}
             placeholder="Confirm Password"
           />
+
+          {/* plain text to see if the passwords are matching or not */}
           {pwd !== cpwd && pwd !== "" && cpwd !== "" ? (
             <Text style={{ color: "red", textAlign: "center" }}>
               Passwords are not matching!
@@ -116,6 +126,7 @@ const RegisterScreen = ({ navigation }) => {
             <Text> </Text>
           )}
 
+            {/* submit button with registerUser function */}
           <TouchableOpacity
             style={commonStyles.button}
             disabled={pwd !== cpwd}
@@ -128,6 +139,7 @@ const RegisterScreen = ({ navigation }) => {
 
           <Text style={{ textAlign: "center" }}>OR</Text>
 
+            {/* Login button */}
           <TouchableOpacity
             style={commonStyles.button}
             disabled={pwd !== cpwd}

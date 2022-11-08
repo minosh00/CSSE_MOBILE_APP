@@ -13,6 +13,8 @@ import commonStyles from "../../styles/common";
 import newOrderStyles from "../../styles/newOrder";
 
 const NewOrderScreen = ({ route, navigation }) => {
+
+  //form states
   const [orderID, setOrderID] = useState("");
   const [itemName, setItemName] = useState("");
   const [qty, setQty] = useState("");
@@ -21,11 +23,15 @@ const NewOrderScreen = ({ route, navigation }) => {
   const [desc, setDesc] = useState("");
   const [price, setPrice] = useState(0);
   const [notes, setNotes] = useState("");
-
-  const [suppliers, setSuppliers] = useState([]);
   const [selected, setSelected] = useState("");
 
+  // array state to store supplier objects
+  const [suppliers, setSuppliers] = useState([]);
+
+  // this executes when the page get loaded
   useEffect(() => {
+
+    //network call to get supplier details from the backend
     axios
       .get(
         "https://backendhostings.herokuapp.com/user/getAllUsers?role=supplier"
@@ -39,8 +45,10 @@ const NewOrderScreen = ({ route, navigation }) => {
   }, []);
 
   const createOrder = () => {
+    // backend URL
     const URL = "https://backendhostings.herokuapp.com/order/createOrder";
 
+    // payload for send to backend
     const payload = {
       userId: selected,
       OrderID: orderID,
@@ -53,9 +61,11 @@ const NewOrderScreen = ({ route, navigation }) => {
       note: notes,
     };
 
+    // network call using above data
     axios
       .post(URL, payload)
       .then((_response) => {
+        // Alert message for user
         Alert.alert(
           "Order Placed",
           "Your order has been placed successfully!!",
@@ -96,6 +106,8 @@ const NewOrderScreen = ({ route, navigation }) => {
         >
           Select a Supplier
         </Text>
+
+        {/* Horizontal scroll view to select supplier */}
         <ScrollView
           horizontal
           style={{ display: "flex", flexDirection: "row", marginVertical: 12 }}
@@ -122,6 +134,9 @@ const NewOrderScreen = ({ route, navigation }) => {
             </TouchableOpacity>
           ))}
         </ScrollView>
+
+        {/* checkes if supplier is selected or not */}
+        {/* the button will appear only if supplier is selected */}
         {selected !== "" && (
           <TouchableOpacity
             onPress={() =>
@@ -136,6 +151,8 @@ const NewOrderScreen = ({ route, navigation }) => {
             <Text style={{ color: "white" }}>Check Items</Text>
           </TouchableOpacity>
         )}
+
+        {/* order form */}
         <TextInput
           value={orderID}
           onChange={(e) => setOrderID(e.nativeEvent.text)}
@@ -187,6 +204,7 @@ const NewOrderScreen = ({ route, navigation }) => {
           placeholder="Notes"
         />
 
+        {/* button to create the order that executes createOrder function */}
         <TouchableOpacity
           onPress={() => createOrder()}
           style={commonStyles.button}

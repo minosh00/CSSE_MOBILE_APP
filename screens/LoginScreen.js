@@ -13,11 +13,17 @@ import commonStyles from "../styles/common";
 import loginStyles from "../styles/login";
 
 const LoginScreen = ({ navigation }) => {
+
+  // states
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
 
+  //function to log an user in
   const loginUser = () => {
+    //backend URL
     const URL = `https://backendhostings.herokuapp.com/user/signin`;
+
+    //network call to above URL
     axios
       .post(URL, { email: email, password: pwd })
       .then((res) => {
@@ -38,6 +44,7 @@ const LoginScreen = ({ navigation }) => {
         style={{ width: "100%", height: "40%" }}
         resizeMode = "contain"
       />
+      {/* Login form */}
       <ScrollView style={{ width: "80%" }}>
           <TextInput
             keyboardType="email-address"
@@ -54,6 +61,7 @@ const LoginScreen = ({ navigation }) => {
             placeholder="Password"
           />
 
+          {/* submit button with loginUser function */}
           <TouchableOpacity
             style={commonStyles.button}
             onPress={() => {

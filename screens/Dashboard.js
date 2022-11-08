@@ -10,6 +10,9 @@ import {
 import dashboardStyles from "../styles/dashboard";
 
 const Dashboard = ({ route, navigation }) => {
+
+  //this will redirects user to the login screen if they are not logged in
+  // this executes when the page get loaded
   useEffect(() => {
     if (!!!route.params) {
       navigation.navigate("Login");
@@ -23,9 +26,11 @@ const Dashboard = ({ route, navigation }) => {
         resizeMode="contain"
         source={require("../assets/Images/DashboardBackground.png")}
       />
+
+      {/* this checks the role of user who logged in and shows the relevant buttons only */}
       {route.params.userRole.toLocaleLowerCase().replace(/\s/g, '') === "sitemanager" && (
         <>
-          {/* Site Manager */}
+          {/* Site Manager Buttons */}
           <TouchableOpacity
             onPress={() =>
               navigation.navigate("NewOrder", {
@@ -53,7 +58,7 @@ const Dashboard = ({ route, navigation }) => {
 
       {route.params.userRole.toLocaleLowerCase().replace(/\s/g, '') === "supplier" && (
         <>
-          {/* Supplier */}
+          {/* Supplier Buttons */}
           <TouchableOpacity
             onPress={() =>
               navigation.navigate("Quotes", {
