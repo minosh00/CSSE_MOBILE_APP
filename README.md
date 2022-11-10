@@ -49,6 +49,4 @@
 |:--:|:--:|:--:|:--:|
 |*`figure 1.9: Delivery Details`* |*`figure 1.10: Make A Payment`* |*`figure 1.11: Supplier Dashboard`* |*`figure 1.12: View Quotations`* |
 
-| <img  alt="2PNG" src="https://user-images.githubusercontent.com/86770967/201165104-eb7f7936-4a14-4fb8-8f01-ed2448141db0.jpg"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/86770967/201165108-fcb12a39-e2b9-4c85-b4a2-87fb91c22ca7.jpg"> | <img  alt="2PNG" src=""> | <img alt="2PNG"   src="https://user-images.githubusercontent.com/86770967/201165855-337203bd-1956-4ffb-8d1f-0376f4cbb899.PNG">
-|:--:|:--:|:--:|:--:|
-|*`figure 1.13: New Invoice`* |*`figure 1.14: All Invoices`* |*`figure 1.15: New Delivery Details`* |*`figure 1.16: View Delivery Details`* |
+
