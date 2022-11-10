@@ -11,29 +11,10 @@
 * ![NodeJs](https://img.shields.io/badge/BackEnd-Node_JS-green) ![ExpressJs](https://img.shields.io/badge/BackEnd-Express_JS-green)
 * ![MongoDB](https://img.shields.io/badge/Database-MongoDB-green)
 
-## Our Contribution:
-* Login to the app as a `Site Manager` or `Supplier`
-* Register to the app as a `Site Manager` or `Supplier`
-* Create an Order by Site Manager 
-* View all created Orders by Site Manager
-* View delivery details 
-* Make a payment by looking the delivery details
-* View quotations by Supplier which send by procurement department
-* Create invoices for quotations
-* View created invoices
-* Add delivery details
+
+
 
 ## Screenshots of working project:
-
-
-
-
-
-
-
-
-
-
 
 
 
