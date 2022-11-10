@@ -33,11 +33,7 @@
 
 
 
-
-
-
-
-| <img alt="1PNG" src="https://user-images.githubusercontent.com/86770967/201162521-60d20fb6-faeb-4baf-b70f-5c15575c8231.jpg"> |<img  alt="2PNG" a src="https://user-images.githubusercontent.com/86770967/201162570-a57b6a50-d769-4fbf-9349-dbfe94e2f4ae.jpg">| <img  alt="2PNG" a src="https://user-images.githubusercontent.com/57215584/138205897-e245c865-499d-458b-8550-a3b859a0cf5c.png">| <img  alt="2PNG" a src="https://user-images.githubusercontent.com/57215584/138206064-785c3402-26b7-4bea-841b-f3369bd88844.png">
+| <img alt="1PNG" src="https://user-images.githubusercontent.com/86770967/201162521-60d20fb6-faeb-4baf-b70f-5c15575c8231.jpg"> |<img  alt="2PNG" a src="https://user-images.githubusercontent.com/86770967/201162570-a57b6a50-d769-4fbf-9349-dbfe94e2f4ae.jpg">| <img  alt="2PNG" a src="https://user-images.githubusercontent.com/86770967/201164619-8d1cb631-a8d9-4710-ab5a-c7344efe121e.jpg">| <img  alt="2PNG" a src="https://user-images.githubusercontent.com/86770967/201164628-0bcf187c-dceb-40c7-800d-ebd44a0aac6c.jpg">
 |:--:|:--:|:--:|:--:|
 | *`figure 1.1: Splash Screen`* | *`figure 1.2: Register Now Screen`* | *`figure 1.3: Log In Screen`* |*`figure 1.4: Site Manager Dashboard`* |
 
