@@ -33,6 +33,11 @@
 
 
 
+
+
+
+
+
 | <img alt="1PNG" src="https://user-images.githubusercontent.com/86770967/201162521-60d20fb6-faeb-4baf-b70f-5c15575c8231.jpg"> |<img  alt="2PNG" a src="https://user-images.githubusercontent.com/86770967/201162570-a57b6a50-d769-4fbf-9349-dbfe94e2f4ae.jpg">| <img  alt="2PNG" a src="https://user-images.githubusercontent.com/86770967/201164619-8d1cb631-a8d9-4710-ab5a-c7344efe121e.jpg">| <img  alt="2PNG" a src="https://user-images.githubusercontent.com/86770967/201164628-0bcf187c-dceb-40c7-800d-ebd44a0aac6c.jpg">
 |:--:|:--:|:--:|:--:|
 | *`figure 1.1: Splash Screen`* | *`figure 1.2: Register Now Screen`* | *`figure 1.3: Log In Screen`* |*`figure 1.4: Site Manager Dashboard`* |
@@ -41,10 +46,10 @@
 |:--:|:--:|:--:|:--:|
 | *`figure 1.5: New Order`* |*`figure 1.6: Summary of Order`* |*`figure 1.7: All Orders`* |*`figure 1.8: All Orders`* |
 
-| <img  alt="2PNG" src="https://user-images.githubusercontent.com/57215584/138207187-ddac1ddd-a8c2-4d40-b578-ac460be7a32c.png"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/57215584/138207935-2d6171f5-8aac-4b93-b06b-1ac33bccfaae.png"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/57215584/138208096-88ede3b5-8600-47bb-afa0-e6c1d8aaeaa1.png"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/57215584/138208342-fdbbf1b1-39c9-4f78-b14b-e281ddbb25cf.png">
+| <img  alt="2PNG" src="https://user-images.githubusercontent.com/86770967/201165090-fa54a5c0-593c-42bf-9be6-18cb0a7d4f26.jpg"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/86770967/201165096-ee9bca9d-8055-463c-95fa-b03fdd3737c5.jpg"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/86770967/201165098-a9ad99aa-2b29-4bee-8c60-856480bab672.jpg"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/86770967/201165101-a580eddb-2599-437e-b57a-6e6e8c04090f.jpg">
 |:--:|:--:|:--:|:--:|
 |*`figure 1.9: Delivery Details`* |*`figure 1.10: Make A Payment`* |*`figure 1.11: Supplier Dashboard`* |*`figure 1.12: View Quotations`* |
 
-| <img  alt="2PNG" src="https://user-images.githubusercontent.com/86770967/201164192-f56bb869-2c32-4d3c-8136-5298f7a58981.jpg"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/57215584/138208636-f867d897-30ff-4cba-98de-3b21ee9dca44.png"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/57215584/138208744-db7a586c-7ffd-448f-829f-8688b82a9aca.png"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/57215584/138208875-d256c736-2400-4f46-9fac-cf48643aca20.png">
+| <img  alt="2PNG" src="https://user-images.githubusercontent.com/86770967/201165104-eb7f7936-4a14-4fb8-8f01-ed2448141db0.jpg"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/86770967/201165108-fcb12a39-e2b9-4c85-b4a2-87fb91c22ca7.jpg"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/57215584/138208744-db7a586c-7ffd-448f-829f-8688b82a9aca.png"> | <img  alt="2PNG" src="https://user-images.githubusercontent.com/57215584/138208875-d256c736-2400-4f46-9fac-cf48643aca20.png">
 |:--:|:--:|:--:|:--:|
 |*`figure 1.13: New Invoice`* |*`figure 1.14: All Invoices`* |*`figure 1.15: New Delivery Details`* |*`figure 1.16: View Delivery Details`* |
